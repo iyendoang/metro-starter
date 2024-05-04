@@ -4,7 +4,7 @@
         <!--begin::Menu-->
         <div class="menu menu-column menu-title-gray-800 menu-state-title-primary menu-state-icon-primary menu-state-bullet-primary menu-arrow-gray-500" id="#kt_aside_menu" data-kt-menu="true" data-kt-menu-expand="false">
             <div class="menu-item">
-                <a class="menu-link <?php echo ($pg == '') ? 'active' : ''; ?>" href=".">
+                <a class="menu-link <?= ($pg == '') ? 'active' : ''; ?>" href=".">
                     <span class="menu-icon">
                         <span class="svg-icon svg-icon-2">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -23,7 +23,7 @@
                     <span class="menu-section text-muted text-uppercase fs-8 ls-1">LIBRARY</span>
                 </div>
             </div>
-            <div data-kt-menu-trigger="click" class="menu-item menu-accordion mb-1 <?php echo ($pg == 'users' || $pg == 'roles') ? 'show' : ''; ?>">
+            <div data-kt-menu-trigger="click" class="menu-item menu-accordion mb-1 <?= ($pg == 'users' || $pg == 'provinces' || $pg == 'regencies' || $pg == 'districts' || $pg == 'villages' || $pg == 'lembagas') ? 'show' : ''; ?>">
                 <span class="menu-link">
                     <span class="menu-icon">
                         <span class="svg-icon svg-icon-2">
@@ -38,11 +38,51 @@
                 </span>
                 <div class="menu-sub menu-sub-accordion">
                     <div class="menu-item">
-                        <a class="menu-link <?php echo ($pg == 'users') ? 'active' : ''; ?>" href="?pg=users">
+                        <a class="menu-link <?= ($pg == 'users') ? 'active' : ''; ?>" href="?pg=users">
                             <span class="menu-bullet">
                                 <span class="bullet bullet-dot"></span>
                             </span>
                             <span class="menu-title">Users</span>
+                        </a>
+                    </div>
+                    <div class="menu-item">
+                        <a class="menu-link <?= ($pg == 'provinces') ? 'active' : ''; ?>" href="?pg=provinces">
+                            <span class="menu-bullet">
+                                <span class="bullet bullet-dot"></span>
+                            </span>
+                            <span class="menu-title">Provinsi</span>
+                        </a>
+                    </div>
+                    <div class="menu-item">
+                        <a class="menu-link <?= ($pg == 'regencies') ? 'active' : ''; ?>" href="?pg=regencies">
+                            <span class="menu-bullet">
+                                <span class="bullet bullet-dot"></span>
+                            </span>
+                            <span class="menu-title">Kota</span>
+                        </a>
+                    </div>
+                    <div class="menu-item">
+                        <a class="menu-link <?= ($pg == 'districts') ? 'active' : ''; ?>" href="?pg=districts">
+                            <span class="menu-bullet">
+                                <span class="bullet bullet-dot"></span>
+                            </span>
+                            <span class="menu-title">Kecamatan</span>
+                        </a>
+                    </div>
+                    <div class="menu-item">
+                        <a class="menu-link <?= ($pg == 'villages') ? 'active' : ''; ?>" href="?pg=villages">
+                            <span class="menu-bullet">
+                                <span class="bullet bullet-dot"></span>
+                            </span>
+                            <span class="menu-title">Kelurahan</span>
+                        </a>
+                    </div>
+                    <div class="menu-item">
+                        <a class="menu-link <?= ($pg == 'lembagas') ? 'active' : ''; ?>" href="?pg=lembagas">
+                            <span class="menu-bullet">
+                                <span class="bullet bullet-dot"></span>
+                            </span>
+                            <span class="menu-title">Lembaga</span>
                         </a>
                     </div>
                 </div>
