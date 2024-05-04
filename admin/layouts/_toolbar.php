@@ -12,20 +12,24 @@ if ($pg == '') {
     $titleToolbarThree = "Pengguna";
 } elseif ($pg == 'provinces') {
     $titleToolbar = "Provinsi";
-    $titleToolbarTwo = "Data Master";
+    $titleToolbarTwo = "Data Master - Wilayah";
     $titleToolbarThree = "Provinsi Indonesia";
 } elseif ($pg == 'regencies') {
     $titleToolbar = "Kota";
-    $titleToolbarTwo = "Data Master";
+    $titleToolbarTwo = "Data Master - Wilayah";
     $titleToolbarThree = "Kota Indonesia";
 } elseif ($pg == 'districts') {
     $titleToolbar = "Kecamatan";
-    $titleToolbarTwo = "Data Master";
+    $titleToolbarTwo = "Data Master - Wilayah";
     $titleToolbarThree = "Kecamatan Indonesia";
 } elseif ($pg == 'villages') {
     $titleToolbar = "Kelurahan";
-    $titleToolbarTwo = "Data Master";
+    $titleToolbarTwo = "Data Master - Wilayah";
     $titleToolbarThree = "Kelurahan Indonesia";
+} elseif ($pg == 'schools') {
+    $titleToolbar = "Sekolah";
+    $titleToolbarTwo = "Data Master";
+    $titleToolbarThree = "Sekolah Indonesia";
 } elseif ($pg == 'lembagas') {
     $titleToolbar = "Lembaga";
     $titleToolbarTwo = "Data Master";

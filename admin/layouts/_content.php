@@ -12,6 +12,8 @@ if ($pg == '') {
     include "districts/districts.php";
 } elseif ($pg == 'villages') {
     include "villages/villages.php";
+} elseif ($pg == 'schools') {
+    include "schools/schools.php";
 } elseif ($pg == 'jenjang') {
     include "jenjang/jenjang.php";
 } elseif ($pg == 'lembagas') {

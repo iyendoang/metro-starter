@@ -1,7 +1,5 @@
 <div class="aside-menu flex-column-fluid">
-    <!--begin::Aside Menu-->
     <div class="hover-scroll-overlay-y my-5 my-lg-5" id="kt_aside_menu_wrapper" data-kt-scroll="true" data-kt-scroll-activate="{default: false, lg: true}" data-kt-scroll-height="auto" data-kt-scroll-dependencies="#kt_aside_logo, #kt_aside_footer" data-kt-scroll-wrappers="#kt_aside_menu" data-kt-scroll-offset="0">
-        <!--begin::Menu-->
         <div class="menu menu-column menu-title-gray-800 menu-state-title-primary menu-state-icon-primary menu-state-bullet-primary menu-arrow-gray-500" id="#kt_aside_menu" data-kt-menu="true" data-kt-menu-expand="false">
             <div class="menu-item">
                 <a class="menu-link <?= ($pg == '') ? 'active' : ''; ?>" href=".">
@@ -23,7 +21,7 @@
                     <span class="menu-section text-muted text-uppercase fs-8 ls-1">LIBRARY</span>
                 </div>
             </div>
-            <div data-kt-menu-trigger="click" class="menu-item menu-accordion mb-1 <?= ($pg == 'users' || $pg == 'provinces' || $pg == 'regencies' || $pg == 'districts' || $pg == 'villages' || $pg == 'lembagas') ? 'show' : ''; ?>">
+            <div data-kt-menu-trigger="click" class="menu-item menu-accordion mb-1 <?= ($pg == 'users' || $pg == 'provinces' || $pg == 'regencies' || $pg == 'districts' || $pg == 'villages' || $pg == 'schools') ? 'show' : ''; ?>">
                 <span class="menu-link">
                     <span class="menu-icon">
                         <span class="svg-icon svg-icon-2">
@@ -45,54 +43,62 @@
                             <span class="menu-title">Users</span>
                         </a>
                     </div>
-                    <div class="menu-item">
-                        <a class="menu-link <?= ($pg == 'provinces') ? 'active' : ''; ?>" href="?pg=provinces">
+                    <div data-kt-menu-trigger="click" class="menu-item here menu-accordion <?= ($pg == 'provinces' || $pg == 'regencies' || $pg == 'districts' || $pg == 'villages') ? 'show' : ''; ?>">
+                        <span class="menu-link">
                             <span class="menu-bullet">
                                 <span class="bullet bullet-dot"></span>
                             </span>
-                            <span class="menu-title">Provinsi</span>
-                        </a>
+                            <span class="menu-title">Wilayah</span>
+                            <span class="menu-arrow"></span>
+                        </span>
+                        <div class="menu-sub menu-sub-accordion menu-active-bg">
+                            <div class="menu-item">
+                                <a class="menu-link <?= ($pg == 'provinces') ? 'active' : ''; ?>" href="?pg=provinces">
+                                    <span class="menu-bullet">
+                                        <span class="bullet bullet-dot"></span>
+                                    </span>
+                                    <span class="menu-title">Provinsi</span>
+                                </a>
+                            </div>
+                            <div class="menu-item">
+                                <a class="menu-link <?= ($pg == 'regencies') ? 'active' : ''; ?>" href="?pg=regencies">
+                                    <span class="menu-bullet">
+                                        <span class="bullet bullet-dot"></span>
+                                    </span>
+                                    <span class="menu-title">Kota</span>
+                                </a>
+                            </div>
+                            <div class="menu-item">
+                                <a class="menu-link <?= ($pg == 'districts') ? 'active' : ''; ?>" href="?pg=districts">
+                                    <span class="menu-bullet">
+                                        <span class="bullet bullet-dot"></span>
+                                    </span>
+                                    <span class="menu-title">Kecamatan</span>
+                                </a>
+                            </div>
+                            <div class="menu-item">
+                                <a class="menu-link <?= ($pg == 'villages') ? 'active' : ''; ?>" href="?pg=villages">
+                                    <span class="menu-bullet">
+                                        <span class="bullet bullet-dot"></span>
+                                    </span>
+                                    <span class="menu-title">Kelurahan</span>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                     <div class="menu-item">
-                        <a class="menu-link <?= ($pg == 'regencies') ? 'active' : ''; ?>" href="?pg=regencies">
+                        <a class="menu-link <?= ($pg == 'schools') ? 'active' : ''; ?>" href="?pg=schools">
                             <span class="menu-bullet">
                                 <span class="bullet bullet-dot"></span>
                             </span>
-                            <span class="menu-title">Kota</span>
-                        </a>
-                    </div>
-                    <div class="menu-item">
-                        <a class="menu-link <?= ($pg == 'districts') ? 'active' : ''; ?>" href="?pg=districts">
-                            <span class="menu-bullet">
-                                <span class="bullet bullet-dot"></span>
-                            </span>
-                            <span class="menu-title">Kecamatan</span>
-                        </a>
-                    </div>
-                    <div class="menu-item">
-                        <a class="menu-link <?= ($pg == 'villages') ? 'active' : ''; ?>" href="?pg=villages">
-                            <span class="menu-bullet">
-                                <span class="bullet bullet-dot"></span>
-                            </span>
-                            <span class="menu-title">Kelurahan</span>
-                        </a>
-                    </div>
-                    <div class="menu-item">
-                        <a class="menu-link <?= ($pg == 'lembagas') ? 'active' : ''; ?>" href="?pg=lembagas">
-                            <span class="menu-bullet">
-                                <span class="bullet bullet-dot"></span>
-                            </span>
-                            <span class="menu-title">Lembaga</span>
+                            <span class="menu-title">Sekolah</span>
                         </a>
                     </div>
                 </div>
             </div>
         </div>
-        <!--end::Menu-->
     </div>
-    <!--end::Aside Menu-->
 </div>
-<!--begin::Footer-->
 <div class="aside-footer flex-column-auto pt-5 pb-7 px-5" id="kt_aside_footer">
     <a href="../documentation/getting-started.html" class="btn btn-custom btn-primary w-100" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss-="click" title="200+ in-house components and 3rd-party plugins">
         <span class="btn-label">Docs &amp; Components</span>
@@ -109,4 +115,3 @@
         <!--end::Svg Icon-->
     </a>
 </div>
-<!--end::Footer-->

@@ -1,0 +1,18 @@
+{
+    "name": "iyen/sidoel",
+    "autoload": {
+        "psr-4": {
+            "Iyen\\Sidoel\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "iyendoang",
+            "email": "ajun190909@gmail.com"
+        }
+    ],
+    "require": {
+        "phpoffice/phpword": "^1.1",
+        "phpoffice/phpspreadsheet": "^1.29"
+    }
+}

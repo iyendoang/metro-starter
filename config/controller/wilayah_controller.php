@@ -41,3 +41,20 @@ if ($pg == 'getDistrict') {
         echo json_encode([]);
     }
 }
+if ($pg == 'getVillage') {
+    if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['district_id'])) {
+        $district_id = $_POST['district_id'];
+        $query = "SELECT * FROM villages WHERE district_id = ?";
+        $stmt = $koneksi->prepare($query);
+        $stmt->bind_param("i", $district_id);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $villages = array();
+        while ($row = $result->fetch_assoc()) {
+            $villages[] = $row;
+        }
+        echo json_encode($villages);
+    } else {
+        echo json_encode([]);
+    }
+}
