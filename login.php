@@ -55,7 +55,7 @@ if (!isset($_SESSION['id'])) {
                                 </button>
                                 <div class="text-center text-muted text-uppercase fw-bolder mb-5">or</div>
                                 <div class="text-gray-400 fw-bold fs-4">New Here?
-                                    <a href="sign-up.html" class="link-primary fw-bolder">Create an Account</a>
+                                    <a href="sign-up.php" class="link-primary fw-bolder">Create an Account</a>
                                 </div>
                             </div>
                         </form>
