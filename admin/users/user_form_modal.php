@@ -40,8 +40,8 @@
                             <select class="form-select form-select-solid" data-control="select2" data-hide-search="true" data-placeholder="Select a User Role" name="role" id="user_role">
                                 <option value="">Select Role...</option>
                                 <option value="admin">Admin</option>
-                                <option value="member">Member</option>
                                 <option value="operator">Operator</option>
+                                <option value="koordinator">Koordinator</option>
                             </select>
                         </div>
                         <div class="col-md-6 fv-row">

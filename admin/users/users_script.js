@@ -55,10 +55,9 @@ var KTDatatablesServerSide = (function () {
           targets: 1,
           className: "d-flex align-items-center",
           render: function (data, type, row) {
-            var statusObj = status[row.status];
             return `	<div class="symbol symbol-circle symbol-30px overflow-hidden me-3">
                     <a href="view.html">
-                      <div class="symbol-label fs-3 bg-light-${statusObj.state} text-${statusObj.state}">${row["fullname_short"]}</div>
+                      <div class="symbol-label fs-3 bg-light-${row['status_color']} text-${row['status_color']}">${row["fullname_short"]}</div>
                     </a>
                   </div>
                   <div class="d-flex flex-column">
@@ -70,8 +69,7 @@ var KTDatatablesServerSide = (function () {
         {
           targets: 5,
           render: function (data, type, row) {
-            var statusObj = status[row.status];
-            return `<div class="badge badge-light-${statusObj.state} fw-bolder">${statusObj.title}</div>`;
+            return `<div class="badge badge-light-${row['status_color']} fw-bolder">${row["status"]}</div>`;
           },
         },
         {

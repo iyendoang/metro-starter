@@ -43,7 +43,7 @@
                             <span class="menu-title">Users</span>
                         </a>
                     </div>
-                    <div data-kt-menu-trigger="click" class="menu-item here menu-accordion <?= ($pg == 'provinces' || $pg == 'regencies' || $pg == 'districts' || $pg == 'villages') ? 'show' : ''; ?>">
+                    <div data-kt-menu-trigger="click" class="menu-item menu-accordion <?= ($pg == 'provinces' || $pg == 'regencies' || $pg == 'districts' || $pg == 'villages') ? 'show' : ''; ?>">
                         <span class="menu-link">
                             <span class="menu-bullet">
                                 <span class="bullet bullet-dot"></span>
@@ -51,7 +51,7 @@
                             <span class="menu-title">Wilayah</span>
                             <span class="menu-arrow"></span>
                         </span>
-                        <div class="menu-sub menu-sub-accordion menu-active-bg">
+                        <div class="menu-sub menu-sub-accordion <?= ($pg == 'provinces' || $pg == 'regencies' || $pg == 'districts' || $pg == 'villages') ? 'menu-active-bg' : ''; ?>">
                             <div class="menu-item">
                                 <a class="menu-link <?= ($pg == 'provinces') ? 'active' : ''; ?>" href="?pg=provinces">
                                     <span class="menu-bullet">

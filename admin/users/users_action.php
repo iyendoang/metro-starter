@@ -23,7 +23,8 @@ if ($pg == 'index') {
         $data[$i]['gender'] = $row['gender'] == "L" ? 'Laki-laki' : ($row['gender'] == "P" ? 'Perempuan' : '');
         $data[$i]['phone'] = $row['phone'];
         $data[$i]['role'] = $row['role'];
-        $data[$i]['status'] = $row['status'];
+        $data[$i]['status'] = $row['status'] == 1 ? 'Aktif' : ($row['status'] == 2 ? 'Tidak aktif' : ($row['status'] == 3 ? 'Pending' : 'Tidak diketahui'));
+        $data[$i]['status_color'] = $row['status'] == 1 ? 'success' : ($row['status'] == 2 ? 'danger' : ($row['status'] == 3 ? 'warning' : 'info'));
         $data[$i]['password'] = $row['password'];
         $i++;
     }
@@ -54,7 +55,7 @@ if ($pg == 'store') {
             exit;
         }
 
-        $sql = "INSERT INTO users (fullname, gender, username, phone, role, update_at, password, status, create_by, update_by) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        $sql = "INSERT INTO users (fullname, gender, username, phone, role, update_at, password, status, create_by, update_by, create_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
         $stmt = $koneksi->prepare($sql);
 
         if (!$stmt) {
@@ -67,7 +68,7 @@ if ($pg == 'store') {
             exit;
         }
 
-        $stmt->bind_param("sssssssiii", $fullname, $gender, $username, $phone, $role, $update_at, $password, $status, $create_by, $update_by);
+        $stmt->bind_param("sssssssiisss", $fullname, $gender, $username, $phone, $role, $update_at, $password, $status, $create_by, $update_by);
 
         if ($stmt->execute()) {
             echo json_encode([
